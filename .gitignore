@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#public directory 
+/public/
+
+#other config files
+eslintrc.js
+eslint.config.mjs
+jsconfig.json
+next.config.mjs
+package-lock.json
+package.json
+
+
+
