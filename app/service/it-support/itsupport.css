@@ -1,0 +1,26 @@
+.it_support_container {
+}
+:is(.it_support_1, .it_support_2, .it_support_3) {
+  padding: 4rem 2rem 1rem 2rem;
+}
+.it_support_1 {
+  background: #e5d9f2;
+}
+.it_support_2 {
+  background: #ddf6d2;
+}
+.it_support_3 {
+  background: #f4f8d3;
+}
+@media screen and (min-width: 768px) {
+  .it_support_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  .it_support_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

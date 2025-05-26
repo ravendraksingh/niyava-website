@@ -1,0 +1,26 @@
+.finacle-card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+}
+.finacle-card {
+  border-bottom: 1px solid #3636361c;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #3636361c;
+}
+
+@media (min-width: 768px) {
+  .finacle-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .finacle-card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

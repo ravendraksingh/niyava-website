@@ -1,0 +1,9 @@
+.card {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* background: var(--nt-bg-blue); */
+  /* color: #fff; */
+  /* color: #00d4ff; */
+}

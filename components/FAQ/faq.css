@@ -1,0 +1,23 @@
+.accordion {
+  --bs-accordion-btn-bg: #ffffff;
+  --bs-accordion-btn-focus-box-shadow: none;
+  --bs-accordion-btn-focus-border-color: unset;
+}
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+.accordion-item:first-child {
+  border-top: 1px solid #3636361c;
+}
+.accordion-item:last-child .accordion-button.collapsed,
+.accordion-item:last-child {
+  border-bottom: 1px solid #3636361c;
+}
+.accordion-button::after {
+  background-image: url("/icons/plus.svg");
+  transition: all 0.5s;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("/icons/dash.svg");
+  transition: all 0.5s;
+}

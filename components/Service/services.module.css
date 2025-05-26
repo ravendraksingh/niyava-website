@@ -1,0 +1,18 @@
+.custom_card {
+  width: 100%;
+  max-width: 380px;
+  /* box-shadow: 8px 8px 2px 1px #6969691c; */
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+.custom_card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .custom_card img {
+    height: 220px;
+  }
+  .custom_card a {
+    align-self: flex-start;
+  }
+}

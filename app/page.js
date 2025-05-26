@@ -1,95 +1,68 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import FAQSection from "@/components/FAQ/FAQSection";
+import ConnectSection from "@/components/Section/ConnectSection";
+import WhyChooseUsCarousel from "@/components/Section/WhyChooseUsCarousel";
+import AllServices from "@/components/Service/AllServices";
+import { FAQ_GENERAL } from "@/constants/faqConstants";
+import { WHYUS_GENERAL } from "@/constants/whyUsConstants";
+import styles from "./home.module.css";
 
+/**
+ * Homepage typically flows like this:
+ * Hero → Services → Why Us → Testimonials → FAQ → Contact
+ */
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div>
+      <section>
+        <img
+          src="/images/home-hero-1920x1080.png"
+          width="100%"
+          alt="Home page hero image"
+          className="border-bottom"
         />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </section>
+      <section className="container section_container max-w-1200">
+        <h2 className="display-5 fw-bold text-center">
+          Innovative IT Solutions to Empower Your Business
+        </h2>
+        <p className="mx-auto fs-4 my-4">
+          At Niyava, we help businesses thrive in the digital age through
+          cutting-edge IT consulting, custom software development, CRM
+          implementation, and technology outsourcing. Whether you&apos;re a
+          growing enterprise or an established organization, our expert team
+          delivers scalable, secure, and tailor-made solutions that accelerate
+          your digital transformation.
+        </p>
+        <p className="mx-auto fs-4 my-4">
+          From optimizing operations to building future-ready platforms, we
+          combine strategy, innovation, and deep tech expertise to turn your
+          business challenges into opportunities. Let&apos;s build what&apos;s
+          next - together.
+        </p>
+      </section>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <section
+        className={`container-fluid section_container dark_blue_bg ${styles.services}`}
+      >
+        <h3 className="display-5 fw-bold text-white text-center pb-md-3">
+          Our Services
+        </h3>
+        <AllServices theme="dark" className="pb-lg-5" />
+      </section>
+
+      <section className="gradient_bg pb-lg-5">
+        <div className="container dotted_bg">
+          <WhyChooseUsCarousel
+            data={WHYUS_GENERAL}
+            heading="Why choose Niyava?"
+          />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <section className={`${styles.faq_section}`}>
+        <FAQSection faq={FAQ_GENERAL} />
+      </section>
+      <ConnectSection />
     </div>
   );
 }

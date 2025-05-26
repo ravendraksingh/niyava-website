@@ -1,0 +1,77 @@
+.webdev_step {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+  padding: 2rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--nt-bg-blue);
+  font-size: 1.25rem;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+}
+.webdev_step-1 {
+  background-color: darkgray;
+  background-image: url("/1-circle.svg");
+  /* border-radius: 50%; */
+  border: 1px solid #dedede;
+  overflow: hidden;
+}
+.webdev_step-2 {
+  background-color: rgba(255, 182, 193, 0.4);
+  background-image: url("/2-circle.svg");
+  /* border: 1px solid lightpink; */
+}
+.webdev_step-3 {
+  background-color: rgba(135, 206, 235, 0.4);
+  background-image: url("/3-circle.svg");
+  /* border: 1px solid skyblue; */
+}
+.webdev_step-4 {
+  background-color: rgba(154, 205, 50, 0.4);
+  background-image: url("/4-circle.svg");
+  /* border: 1px solid yellowgreen; */
+}
+.slide_from_left {
+  animation: linear ease-in-out forwards;
+  animation-name: slide-from-left;
+  animation-duration: 3s;
+  animation-timeline: view(90% 10px);
+}
+
+.webdev_s1 {
+  background-color: navy;
+  color: white;
+  padding: 2rem;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
+
+@keyframes slide-from-left {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+.appear {
+  animation: linear forwards;
+  animation-name: appear;
+  animation-timeline: view(90% 10px);
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

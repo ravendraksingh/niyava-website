@@ -1,0 +1,70 @@
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.full-height {
+  display: flex;
+  flex: 1;
+  height: 100px;
+}
+.nav-item {
+  padding-inline: 1rem;
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 2.5rem;
+}
+/* Show dropdown on hover */
+.dropdown-hover:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* removes bootstrap's default delay */
+  transition: opacity 0.3s ease;
+  --bs-dropdown-min-width: 40vw;
+  --bs-dropdown-padding-y: 1rem;
+  --bs-dropdown-link-hover-bg: var(--nt-orange);
+  --bs-dropdown-link-active-color: #fff;
+}
+.sidebar .list-none {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  padding-left: 0;
+}
+.list-none > a {
+  margin-bottom: 0.25rem;
+  padding: 0.5rem;
+}
+.list-none > a:hover {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+.sidebar .offcanvas-body {
+  padding-top: 2rem;
+  padding-left: 1rem;
+}
+.sidebar .offcanvas-body ul {
+  list-style: none;
+}
+.list-item-primary {
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+}
+.list-item-secondary {
+  padding: 0.25rem 0.75rem;
+  margin-left: 1rem;
+  margin-bottom: 0.25rem;
+}
+.list-item-primary:hover,
+.list-item-secondary:hover {
+  background-color: var(--bs-primary);
+  color: #fff;
+}
+.list-item-custom {
+  width: 100%;
+}
+.offcanvas-body a:hover {
+  text-decoration: underline;
+}
+.sidebar-link-primary {
+  display: block;
+  width: 100%;
+}

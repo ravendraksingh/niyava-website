@@ -1,0 +1,15 @@
+.ctaConsult {
+  /* font-weight: bold; */
+  font-weight: 500;
+  font-size: 1.5rem;
+  background-color: var(--niyava-yellow);
+  padding-block: .5rem;
+  padding-inline: 2rem;
+  border-radius: 2rem;
+}
+
+.ctaConsult:hover {
+  background-color: var(--niyava-yellow);
+  border: 1px solid yellow;
+  text-decoration: underline;
+}
